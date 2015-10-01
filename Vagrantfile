@@ -11,4 +11,13 @@ Vagrant.configure("2") do |config|
     # Optional NFS. Make sure to remove other synced_folder line too
     #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
+    config.vm.provider "virtualbox" do |v|
+    v.memory = 512
+    # v.cpus = 2
+    end
+
+    # Running bootstrap
+    # -----------------
+    config.vm.provision :shell, :path => "vagrant_bootstrap/bootstrap.sh"
+
 end
