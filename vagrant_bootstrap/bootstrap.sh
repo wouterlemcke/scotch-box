@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get -y install php5-dev
 sudo pecl install xdebug
 
-# echo "zend_extension=/usr/lib/php5/20131226/xdebug.so" >> /etc/php5/apache2/php.ini
+echo "zend_extension=/usr/lib/php5/20131226/xdebug.so" >> /etc/php5/apache2/php.ini
 
 # "zend_extension=/usr/lib/php5/20131226/xdebug.so" to php.ini
 # PHP tools
