@@ -3,7 +3,11 @@
 # Update repositories for xdebug
 sudo apt-get update
 # Install php5-dev for phpize
-sudo apt-get -y install php5-dev
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get install php7.0 libapache2-mod-php7.0
+sudo a2dismod php5
+sudo a2enmod php7.0
+sudo apachectl restart
 sudo pecl install xdebug
 echo "zend_extension=/usr/lib/php5/20131226/xdebug.so" >> /etc/php5/apache2/php.ini
 echo "; xdebug
